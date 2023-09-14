@@ -1,0 +1,49 @@
+@model o.Models.ilac
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Düzenle</h1>
+
+<h4>ilac</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ilacId" />
+            <div class="form-group">
+                <label asp-for="ilacAdı" class="control-label"></label>
+                <input asp-for="ilacAdı" class="form-control" />
+                <span asp-validation-for="ilacAdı" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ilacFiyat" class="control-label"></label>
+                <input asp-for="ilacFiyat" class="form-control" />
+                <span asp-validation-for="ilacFiyat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ilacStock" class="control-label"></label>
+                <input asp-for="ilacStock" class="form-control" />
+                <span asp-validation-for="ilacStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ekinId" class="control-label"></label>
+                <select asp-for="ekinId" class="form-control" asp-items="ViewBag.ekinId"></select>
+                <span asp-validation-for="ekinId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">kayıt Listesine Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,49 @@
+@model o.Models.ekin
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Düzenle</h1>
+
+<h4>ekin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ekinId" />
+            <div class="form-group">
+                <label asp-for="ekinAdı" class="control-label"></label>
+                <input asp-for="ekinAdı" class="form-control" />
+                <span asp-validation-for="ekinAdı" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ekinFiyat" class="control-label"></label>
+                <input asp-for="ekinFiyat" class="form-control" />
+                <span asp-validation-for="ekinFiyat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ekinstock" class="control-label"></label>
+                <input asp-for="ekinstock" class="form-control" />
+                <span asp-validation-for="ekinstock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tarlaId" class="control-label"></label>
+                <select asp-for="tarlaId" class="form-control" asp-items="ViewBag.tarlaId"></select>
+                <span asp-validation-for="tarlaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Kayıt Listesine Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,42 @@
+@model o.Models.ekin
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>ekin</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ekinAdı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ekinAdı)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ekinFiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ekinFiyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ekinstock)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ekinstock)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tarla)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tarla.tarlaId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ekinId">Düzenle</a> |
+    <a asp-action="Index">Kayıt Listesine Geri Dön</a>
+</div>

@@ -1,0 +1,47 @@
+@model IEnumerable<o.Models.tarla>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tarla Listesi</h1>
+
+<p>
+    <a asp-action="Create">Yeni Kayıt Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TarlaAdı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TarlaGenislik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tarlaBolge)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TarlaAdı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TarlaGenislik)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tarlaBolge)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.tarlaId">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.tarlaId">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.tarlaId">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

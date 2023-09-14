@@ -1,0 +1,43 @@
+@model o.Models.tarla
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Kayıt Oluştur</h1>
+
+<h4>tarla</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TarlaAdı" class="control-label"></label>
+                <input asp-for="TarlaAdı" class="form-control" />
+                <span asp-validation-for="TarlaAdı" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TarlaGenislik" class="control-label"></label>
+                <input asp-for="TarlaGenislik" class="form-control" />
+                <span asp-validation-for="TarlaGenislik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tarlaBolge" class="control-label"></label>
+                <input asp-for="tarlaBolge" class="form-control" />
+                <span asp-validation-for="tarlaBolge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">kayıt Listesine Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

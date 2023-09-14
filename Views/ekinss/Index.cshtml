@@ -1,0 +1,53 @@
+@model IEnumerable<o.Models.ekin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ekin Listesi</h1>
+
+<p>
+    <a asp-action="Create">Yeni kayıt Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ekinAdı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ekinFiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ekinstock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tarla)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ekinAdı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ekinFiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ekinstock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tarla.tarlaId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ekinId">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.ekinId">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.ekinId">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

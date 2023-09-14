@@ -1,0 +1,36 @@
+@model o.Models.tarla
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>tarla</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TarlaAdı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TarlaAdı)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TarlaGenislik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TarlaGenislik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tarlaBolge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tarlaBolge)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.tarlaId">Düzenle</a> |
+    <a asp-action="Index">kayıt Listesine Geri Dön</a>
+</div>

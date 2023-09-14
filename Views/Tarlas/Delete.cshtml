@@ -1,0 +1,39 @@
+@model o.Models.tarla
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Kayıt Sil</h1>
+
+
+<div>
+    <h4>tarla</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TarlaAdı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TarlaAdı)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TarlaGenislik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TarlaGenislik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tarlaBolge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tarlaBolge)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="tarlaId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">kayıt Listesine Geri Dön</a>
+    </form>
+</div>

@@ -1,0 +1,45 @@
+@model o.Models.ilac
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Kayıt Sil</h1>
+
+
+<div>
+    <h4>ilac</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ilacAdı)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ilacAdı)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ilacFiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ilacFiyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ilacStock)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ilacStock)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ekin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ekin.ekinId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ilacId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">kayıt Listesine Geri Dön</a>
+    </form>
+</div>

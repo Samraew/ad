@@ -1,0 +1,53 @@
+@model IEnumerable<o.Models.ilac>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>İlac Listesi</h1>
+
+<p>
+    <a asp-action="Create">Yeni Kayıt Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ilacAdı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ilacFiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ilacStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ekin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ilacAdı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ilacFiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ilacStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ekin.ekinId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ilacId">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.ilacId">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.ilacId">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
