@@ -11,6 +11,7 @@ public class ilac
     public string? ilacFiyat{get;set;}
     [Display(Name="İlaç Stock Durumuı")]
     public string? ilacStock{get;set;}
+    public string? ilacadın {get; set;}
     
     public int ekinId {get;set;}
 

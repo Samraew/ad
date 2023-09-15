@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xDYq4LOVhBG94UWjRAqHo6nkaMEdsg0Ygjqby2NDVMs=",
+  "Hash": "6jdGkfA5p846djErlcTdUpMDWsXLUiHGGsIjQbGdH3c=",
   "Source": "o",
   "BasePath": "_content/o",
   "Mode": "Default",
@@ -2140,6 +2140,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\video\\indir.htm"
+    },
+    {
+      "Identity": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\Kıs.jpg",
+      "SourceId": "o",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\",
+      "BasePath": "_content/o",
+      "RelativePath": "video/Kıs.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\video\\Kıs.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\kıs1.jpg",
+      "SourceId": "o",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\",
+      "BasePath": "_content/o",
+      "RelativePath": "video/kıs1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\video\\kıs1.jpg"
     },
     {
       "Identity": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\rr.png",

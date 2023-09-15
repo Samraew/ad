@@ -4,6 +4,19 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
+    @if (User.Identity.IsAuthenticated)
+{<div class="dropdown" style="display">
+                 <a class="btn  dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li> <a class="dropdown-item  text-red" asp-area="" asp-controller="Tarlas"asp-action="Index">Tarlalar</a></li>
+                <li> <a class="dropdown-item  text-red" asp-area="" asp-controller="ekinss"asp-action="Index">Ekinler</a></li>
+                <li> <a class="dropdown-item  text-red" asp-area="" asp-controller="ilacs"asp-action="Index">İlaçlar</a></li>
+                </div>
+                
+}
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">

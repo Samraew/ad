@@ -1,11 +1,13 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using o.Models;
 
 namespace o.Controllers;
-
+ //10/27/2021 Paul.  Add Authorization Header to allow access without login.
 public class HomeController : Controller
 {
+    
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)

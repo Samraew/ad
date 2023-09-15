@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using o.Data;
@@ -10,12 +11,10 @@ using o.Models;
 
 
 namespace o.Controllers
-{
-    
-
+{   
+    [Authorize]
     public class TarlasController : Controller
-    {
-         
+    {       
         private readonly oContext _context;
 
         public TarlasController(oContext context)

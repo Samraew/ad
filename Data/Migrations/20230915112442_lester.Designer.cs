@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using o.Data;
 
@@ -10,9 +11,11 @@ using o.Data;
 namespace o.Migrations
 {
     [DbContext(typeof(oContext))]
-    partial class oContextModelSnapshot : ModelSnapshot
+    [Migration("20230915112442_lester")]
+    partial class lester
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");

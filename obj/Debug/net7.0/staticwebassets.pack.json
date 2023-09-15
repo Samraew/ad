@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\Kıs.jpg",
+      "PackagePath": "staticwebassets\\video\\Kıs.jpg"
+    },
+    {
       "Id": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\a.jpg",
       "PackagePath": "staticwebassets\\video\\a.jpg"
     },
@@ -255,6 +259,10 @@
     {
       "Id": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\indir.htm",
       "PackagePath": "staticwebassets\\video\\indir.htm"
+    },
+    {
+      "Id": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\kıs1.jpg",
+      "PackagePath": "staticwebassets\\video\\kıs1.jpg"
     },
     {
       "Id": "C:\\Users\\Samraew\\Desktop\\O1\\o\\wwwroot\\video\\rr.png",

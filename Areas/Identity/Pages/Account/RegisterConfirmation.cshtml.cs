@@ -49,6 +49,7 @@ namespace o.Areas.Identity.Pages.Account
             if (email == null)
             {
                 return RedirectToPage("/Index");
+                
             }
             returnUrl = returnUrl ?? Url.Content("~/");
 
